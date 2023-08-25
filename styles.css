@@ -76,33 +76,28 @@
                 margin: 0px;
             }
 
-            .button-get{
+            .button{
                 border-style: solid;
                 padding: 10px 36px;
-                background: #FFA62B;
                 border-radius: 37px;
                 text-decoration: none;
-                border-width: 0px;
-                color: #fff;
                 font-size: 14px;
-                font-style: normal;
-                font-weight: 600;
                 line-height: 28px;
                 letter-spacing: 0.2px;
+                font-weight: 600;
+            }
+
+            .button-get{
+                background: #FFA62B;
+                border-width: 0px;
+                color: #fff;
+                font-style: normal;
             }
 
             .button-learn{
-                border-style:solid;
-                padding: 10px 36px;
                 border-color: #fff;
                 border-width: 1px;
-                border-radius: 37px;
-                text-decoration: none;
                 color: #fff;
-                font-size: 14px;
-                line-height: 28px;
-                letter-spacing: 0.2px;
-                font-weight: 600;
             }
 
             .buttons{
