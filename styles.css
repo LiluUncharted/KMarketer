@@ -135,6 +135,7 @@
            /* ------------body and cover-image------------ */  
             body, html{
                 font-family: Montserrat;
+                font-size: 14px;
                 margin: 0px;
             }
 
@@ -203,4 +204,4 @@
             .cover{
                 background-position: 42% 0%;
             }
-        }      
+        }
