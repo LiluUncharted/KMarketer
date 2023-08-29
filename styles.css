@@ -205,3 +205,88 @@
                 background-position: 42% 0%;
             }
         }
+                    
+
+
+            /* --------why choose us_grid-------- */
+            h2{
+                color: #fff;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 57px;
+                letter-spacing: 0.2px;
+                margin: 0px;
+            }
+
+            p{
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+                color: #737373;
+                margin: 0px;
+            }
+
+            .container-why-us-top{
+                display: flex;
+                max-width: 1050px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin: auto;
+                padding: 45px 0px;
+            }
+
+            .container-why-us-top p{
+                text-align: center;
+                max-width: 470px;
+                color: #fff;
+            }
+
+            h5{
+                font-family: Montserrat;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.1px;
+            }
+
+            .icon-text-align{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .why-us-center-boxes{
+                display: flex;
+                flex-direction: column;
+                max-width: 328px;
+                align-items:start;
+                gap: 15px;
+                padding: 35px 40px;
+                border: 1px solid #E8E8E8;
+                background: #FFF;
+            }
+
+            .container-why-us-center {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 30px;
+                padding: 0px;
+                max-width: 1046px;
+                margin: auto;
+              }
+
+              .background-why-us{
+                background-color: #252B42;
+                background-size: contain;
+                display: flex;
+                padding: 100px 0px;
+                flex-direction: column;
+                align-items: center;
+            }
+              
