@@ -54,9 +54,10 @@
             
              /* ------------container------------ */
             h1{
-                max-width: 75%;
+                max-width: 573px;
                 text-align: center;
-                font-size: 4em;
+                font-size: 58px;
+                font-style: normal;
                 font-weight: 800;
                 line-height: 80px;
                 letter-spacing: 0.2px;
@@ -65,10 +66,11 @@
             }
 
             h4{
-                max-width: 71%;
+                max-width: 65%;
                 text-align: center;
-                font-size: 1.3em;
+                font-size: 20px;
                 font-weight: 500;
+                font-style: normal;
                 line-height: 30px;
                 letter-spacing: 0.2px;
                 color: #fff;
@@ -83,13 +85,13 @@
                 font-size: 14px;
                 line-height: 28px;
                 letter-spacing: 0.2px;
-                font-weight: 600;
+                font-weight: 700;
                 font-style: normal;
             }
 
             .button--primary{
                 background: #FFA62B;
-                border-width: 0px;
+                border:none;
                 color: #fff;
             }
 
@@ -105,10 +107,6 @@
                 justify-content: center;
                 align-items: flex-start;
                 gap: 10px;
-            }
-
-            #MQ--buttons{
-                display: none;
             }
 
             .container-center{
@@ -155,7 +153,6 @@
             .header{
                 flex-direction: column;
                 padding-top: 3em;
-                padding-bottom: 3em;
             }
             
             .navbar{
@@ -169,26 +166,27 @@
                 gap: 15px;
             }
 
-            #MQ--buttons{
-                display: block;
-            }
-
             #big--buttons{
-                display: none;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 25px;
+                max-width: 185px;
             }
             
             h1{
-                font-size: 1em;
-                line-height: 0.1px;
-                padding: 10px 0px;
-                letter-spacing: 0px;
+                font-size: 40px;
+                line-height: 57px;
+                font-style: normal;
+                font-weight: 700;
+                letter-spacing: 0.2px;
+                max-width: 290px;
             }
 
             h4{
                 line-height: 20px;
-                font-size: 0.7em;
-                letter-spacing: 0px;
-                max-width: 90%;
+                font-size: 14px;
+                max-width: 280px;
             }
 
             .container-all{
@@ -197,10 +195,6 @@
 
             .container-center{
                 padding: 20px 0px;
-                gap: 20px;
-            }
-
-            .cover{
-                background-position: 42% 0%;
+                gap: 40px;
             }
         }      
