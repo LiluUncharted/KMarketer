@@ -210,6 +210,7 @@
 
             /* --------why choose us_grid-------- */
             h2{
+                text-transform: uppercase;
                 color: #fff;
                 font-size: 40px;
                 font-style: normal;
@@ -231,7 +232,6 @@
 
             .container-why-us-top{
                 display: flex;
-                max-width: 1050px;
                 flex-direction: column;
                 align-items: center;
                 gap: 10px;
@@ -254,14 +254,14 @@
                 letter-spacing: 0.1px;
             }
 
-            .icon-text-align{
+            .card__content{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 15px;
             }
 
-            .why-us-center-boxes{
+            .card-header{
                 display: flex;
                 flex-direction: column;
                 max-width: 328px;
