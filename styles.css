@@ -1,4 +1,11 @@
-              /* ------------section header--navbar------------ */
+            :root {
+                --main-font-color: #FFF;
+                --main-font-size: 14px;
+                --main-button-color: #FFA62B;
+                --main-bg-color: #252B42;
+            }
+ 
+ /* ------------section header--navbar------------ */
              .logo-box{
                 display: flex;
                 align-items: center;
@@ -7,12 +14,12 @@
 
             .right-nav li a{
                 text-decoration: none;
-                color: #ffffff;
+                color: var(--main-font-color);
             }
 
             .right-nav{
                 display: flex;
-                font-size: 14px;
+                font-size: var(--font-size);
                 font-style: normal;
                 font-weight: 600;
                 line-height: 24px;
@@ -34,14 +41,14 @@
                 display: flex;
                 flex-direction: row ;
                 align-items: end;
-                padding: 13px 0px 13px 0px;
+                padding: 13px 0px;
                 gap: 39px;
                 flex-wrap: wrap;
             }
 
             .header{
                 display: flex;
-                color: #fff;
+                color: var(--main-font-color);
                 flex-direction: row;
                 align-items: center;
                 padding: 23px 0px;
@@ -61,7 +68,7 @@
                 font-weight: 800;
                 line-height: 80px;
                 letter-spacing: 0.2px;
-                color: #ffffff;
+                color: var(--main-font-color);
                 margin: 0px;
             }
 
@@ -73,7 +80,7 @@
                 font-style: normal;
                 line-height: 30px;
                 letter-spacing: 0.2px;
-                color: #fff;
+                color: var(--main-font-color);
                 margin: 0px;
             }
 
@@ -82,7 +89,7 @@
                 padding: 10px 36px;
                 border-radius: 37px;
                 text-decoration: none;
-                font-size: 14px;
+                font-size: var(--main-font-size);
                 line-height: 28px;
                 letter-spacing: 0.2px;
                 font-weight: 700;
@@ -91,24 +98,24 @@
             }
 
             .button--primary{
-                background: #FFA62B;
+                background: var(--main-button-color);
                 border:none;
-                color: #fff;
+                color: var(--main-font-color);
             }
 
             .button--primary:hover{
                 background-color: transparent;
                 border-style: solid;
                 border-width: 1px;
-                border-color: #ffa52b;
+                border-color: var(--main-button-color);
                 transition-duration: 0.4s;
             }
 
             .button--secondary{
                 background: none;
-                border-color: #fff;
+                border-color: #FFF;
                 border-width: 1px;
-                color: #fff;
+                color: var(--main-font-color);
             }
 
             .button--secondary:hover{
@@ -167,7 +174,7 @@
             /* --------section-why choose us-------- */
             h2{
                 text-transform: uppercase;
-                color: #fff;
+                color: var(--main-font-color);
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 700;
@@ -176,9 +183,8 @@
                 margin: 0px;
             }
 
-
             p{
-                font-size: 14px;
+                font-size: var(--main-font-size);
                 font-style: normal;
                 font-weight: 500;
                 line-height: 20px;
@@ -199,9 +205,8 @@
             .container-why-us-top p{
                 text-align: center;
                 max-width: 470px;
-                color: #fff;
+                color: var(--main-font-color);
             }
-
 
             h5{
                 font-family: Montserrat;
@@ -210,6 +215,7 @@
                 font-weight: 700;
                 line-height: 24px;
                 letter-spacing: 0.1px;
+                margin: auto;
             }
 
             .card__content{
@@ -240,7 +246,7 @@
               }
 
               .background-why-us{
-                background-color: #252B42;
+                background-color: var(--main-bg-color);
                 background-size: contain;
                 display: flex;
                 padding: 100px 0px;
@@ -307,9 +313,9 @@
     
                 /* ------------section header--navbar------------ */
                 h2{
-                  max-width: 251px;
+                  max-width: 252px;
                   text-align: center;
-                  font-weight: 600;
+                  font-weight: 700;
                 }
 
                 .container-why-us-top p{
@@ -332,4 +338,3 @@
                     padding: 30px 40px 73px 40px;
                 }
             }    
-              
