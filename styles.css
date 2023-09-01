@@ -18,6 +18,11 @@
                 color: var(--main-font-color);
             }
 
+            .right-nav li a:hover{
+                text-decoration-color: var(--main-font-color);
+                text-decoration-line: underline;
+            }
+
             .right-nav{
                 display: flex;
                 font-size: var(--font-size);
@@ -50,11 +55,7 @@
             .header{
                 display: flex;
                 color: var(--main-font-color);
-                flex-direction: row;
-                align-items: center;
                 padding: 23px 0px;
-                margin: auto;
-                width: 80%;
                 justify-content: space-between;
                 flex-wrap: wrap;
             }
@@ -74,7 +75,7 @@
             }
 
             h4{
-                max-width: 65%;
+                max-width: 539px;
                 text-align: center;
                 font-size: 20px;
                 font-weight: 500;
@@ -135,22 +136,12 @@
             .container-center{
                 display: flex;
                 flex-direction: column;
-                max-width: 860px;
-                padding: 50px 0px;
+                padding: 140px 0px;
                 align-items: center;
                 gap: 40px;
-                margin: 0px;
             }
 
-            .container-all{
-                display: flex;
-                max-width: 1050px;
-                flex-direction: column;
-                align-items: center;
-                padding: 90px 0px;
-                gap: 90px;
-                margin: auto;
-            }
+
 
 
            /* ------------body and cover-image------------ */  
@@ -169,9 +160,6 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
             }
                     
 
@@ -198,22 +186,22 @@
                 margin: 0px;
             }
 
-            .container-why-us-top{
+            .info-header{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 10px;
                 margin: auto;
-                padding: 45px 0px;
+                padding: 145px 0px 45px 0px;
             }
 
-            .container-why-us-top p{
+            .info-header p{
                 text-align: center;
                 max-width: 470px;
                 color: var(--main-font-color);
             }
 
-            .card__content h5{
+            .info-card-header-title{
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
@@ -223,14 +211,14 @@
                 color: #252B42;
             }
 
-            .card__content{
+            .info-card-header{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 15px;
             }
 
-            .card-header{
+            .info-card{
                 display: flex;
                 flex-direction: column;
                 max-width: 328px;
@@ -241,21 +229,20 @@
                 background: #FFF;
             }
 
-            .container-why-us-center {
+            .info-grid{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 30px;
-                padding: 0px;
+                padding-bottom: 100px;
                 max-width: 1046px;
                 margin: auto;
               }
 
-              .background-why-us{
-                background-size: contain;
+              .section-block{
                 display: flex;
-                padding: 100px 0px;
                 flex-direction: column;
-                align-items: center;
+                max-width: 1050px;
+                margin: auto;
             }
 
 
@@ -275,7 +262,6 @@
             .footer-header{
                 display: flex;
                 justify-content: space-between;
-                margin: auto;
                 padding: 40px 0px;
             }
 
@@ -286,7 +272,7 @@
                 margin: 0px auto;
             }
 
-            .button-subscribe{
+            .subscribe-button{
                 font-size: var(--main-font-size);
                 font-style: normal;
                 font-weight: 400;
@@ -300,6 +286,7 @@
                 border-radius: 0px 5px 5px 0px;
                 background-color: var(--main-button-color);
                 color: var(--main-font-color);
+                cursor: pointer;
             }
 
             #email{
@@ -317,7 +304,7 @@
                 background: #F9F9F9;
             }
 
-            .subscribe-form label{
+            .form-subscribe label{
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 400;
@@ -337,7 +324,7 @@
                 gap: 20px;
             }
 
-            .scan-columns-content li a{
+            .columns-links li a{
                 text-decoration: none;
                 color: #bdbdbd;
                 font-size: var(--main-font-size);
@@ -345,6 +332,12 @@
                 font-weight: 500;
                 line-height: 24px;
                 letter-spacing: 0.2px;
+                cursor: pointer;
+            }
+
+            .columns-links li a:hover{
+                text-decoration-color: var(--main-font-color);
+                text-decoration-line: underline;
             }
 
             h5{
@@ -357,7 +350,7 @@
                 margin: 0px;
             }
 
-            .scan-columns-content{
+            .columns-links{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -367,7 +360,7 @@
                 padding: 0px;
             }
 
-            .scan-columns-align{
+            .columns-header{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -381,12 +374,11 @@
                 gap: 30px;
             }
 
-            .footer-container{
+            .footer-content{
                 display: flex;
                 flex-direction: column;
                 padding: 70px 0px;
                 align-items: flex-start;
-                margin: auto;
             }
 
             .copyright-content h6{
@@ -409,11 +401,6 @@
             .footer-copyright{
                 background-color: var(--secondary-bg-color);
                 padding: 25px 0px;
-            }
-
-            .footer{
-                margin: auto;
-                max-width: 1050px;
             }
 
 
@@ -479,21 +466,21 @@
                   font-weight: 700;
                 }
 
-                .container-why-us-top p{
+                .info-header p{
                     max-width: 305px;
                     font-weight: 400;
                 }
 
-                .card-header p{
+                .info-card p{
                     max-width: 245px;
                 }
 
-                .container-why-us-center{
+                .info-grid{
                     display: flex;
                     flex-direction: column;
                 }
 
-                .background-why-us{
+                .section-block{
                     display: flex;
                     flex-direction: column;
                     padding: 30px 40px 73px 40px;
