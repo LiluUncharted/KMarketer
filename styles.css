@@ -58,10 +58,11 @@
                 padding: 23px 0px;
                 justify-content: space-between;
                 flex-wrap: wrap;
+                align-items: center;
             }
 
             
-             /* ------------container------------ */
+        /* ------------container------------ */
             h1{
                 max-width: 573px;
                 text-align: center;
@@ -144,7 +145,7 @@
 
 
 
-           /* ------------body and cover-image------------ */  
+        /* ------------body and cover-image------------ */  
             body, html{
                 font-family: Montserrat;
                 margin: 0px;
@@ -161,10 +162,62 @@
                 background-repeat: no-repeat;
                 position: relative;
             }
+
+            @media only screen and (min-width: 320px) and (max-width: 768px){
+            /* ------------section header--navbar------------ */
+                .header{
+                    flex-direction: column;
+                    padding-top: 3em;
+                }
+                
+                .navbar{
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 350px;
+                    gap: 0;
+                }
+    
+                .right-nav{
+                    gap: 15px;
+                }
+    
+                #big--buttons{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 25px;
+                    max-width: 185px;
+                }
+                
+                h1{
+                    font-size: 40px;
+                    line-height: 57px;
+                    font-style: normal;
+                    font-weight: 700;
+                    letter-spacing: 0.2px;
+                    max-width: 290px;
+                }
+    
+                h4{
+                    font-weight: 400;
+                    line-height: 30px;
+                    font-size: 20px;
+                    max-width: 280px;
+                }
+    
+                .container-all{
+                    padding: 30px 0px 50px 0px;
+                }
+    
+                .container-center{
+                    padding: 20px 0px;
+                    gap: 40px;
+                }
+            }
                     
 
 
-            /* --------section-why choose us-------- */
+/* --------section-why choose us-------- */
             h2{
                 text-transform: uppercase;
                 color: var(--main-font-color);
@@ -236,19 +289,48 @@
                 padding-bottom: 100px;
                 max-width: 1046px;
                 margin: auto;
-              }
+            }
 
-              .section-block{
+              .container{
                 display: flex;
                 flex-direction: column;
                 max-width: 1050px;
                 margin: auto;
             }
 
+            @media only screen and (min-width: 320px) and (max-width: 768px){
+                /* ------------section header--navbar------------ */
+                h2{
+                  max-width: 252px;
+                  text-align: center;
+                  font-weight: 700;
+                }
+
+                .info-header p{
+                    max-width: 305px;
+                    font-weight: 400;
+                }
+
+                .info-card p{
+                    max-width: 245px;
+                }
+
+                .info-grid{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .container{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 30px 40px 73px 40px;
+                }
+            }    
 
 
 
-            /* ------------footer------------ */
+
+/* ----------------footer---------------- */
             .footer-media{
                 display: flex;
                 flex-direction: row;
@@ -272,6 +354,19 @@
                 margin: 0px auto;
             }
 
+            #email{
+                display: flex;
+                padding: 15px 20px;
+                border-radius: 5px 0px 0px 5px;
+                border: 1px solid #E6E6E6;
+                background: #F9F9F9;
+            }
+
+            input::placeholder{
+                color: #BDBDBD;
+                font-size: var(--main-font-size);
+            }
+
             .subscribe-button{
                 font-size: var(--main-font-size);
                 font-style: normal;
@@ -289,19 +384,8 @@
                 cursor: pointer;
             }
 
-            #email{
-                color: #BDBDBD;
-                font-size: var(--main-font-size);
-                font-style: normal;
-                font-weight: 400;
-                line-height: 28px;
-                letter-spacing: 0.2px;
+            .form-email{
                 display: flex;
-                padding: 15px 30px 15px 20px;
-                align-items: center;
-                border-radius: 5px 0px 0px 5px;
-                border: 1px solid #E6E6E6;
-                background: #F9F9F9;
             }
 
             .form-subscribe label{
@@ -313,15 +397,21 @@
                 color: #bdbdbd;
             }
 
-            .form-email{
-                display: flex;
-            }
-
             .footer-form{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 20px;
+            }
+
+                .columns-heading{
+                color: var(--main-font-color);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0.1px;
+                margin: 0px;
             }
 
             .columns-links li a{
@@ -340,16 +430,6 @@
                 text-decoration-line: underline;
             }
 
-            h5{
-                color: var(--main-font-color);
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 24px;
-                letter-spacing: 0.1px;
-                margin: 0px;
-            }
-
             .columns-links{
                 display: flex;
                 flex-direction: column;
@@ -360,12 +440,12 @@
                 padding: 0px;
             }
 
-            .columns-header{
+            .columns-content{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 20px;
-                padding-right: 30px;
+                min-width: 150px;
             }
 
             .footer-columns{
@@ -381,7 +461,7 @@
                 align-items: flex-start;
             }
 
-            .copyright-content h6{
+            .copyright-heading{
                 color: var(--main-font-color);
                 font-size: var(--main-font-size);
                 font-style: normal;
@@ -403,86 +483,4 @@
                 padding: 25px 0px;
             }
 
-
-            @media only screen and (min-width: 320px) and (max-width: 568px){
-                /* ------------section header--navbar------------ */
-                .header{
-                    flex-direction: column;
-                    padding-top: 3em;
-                }
-                
-                .navbar{
-                    flex-direction: column;
-                    align-items: center;
-                    max-width: 350px;
-                    gap: 0;
-                }
-    
-                .right-nav{
-                    gap: 15px;
-                }
-    
-                #big--buttons{
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    gap: 25px;
-                    max-width: 185px;
-                }
-                
-                h1{
-                    font-size: 40px;
-                    line-height: 57px;
-                    font-style: normal;
-                    font-weight: 700;
-                    letter-spacing: 0.2px;
-                    max-width: 290px;
-                }
-    
-                h4{
-                    font-weight: 400;
-                    line-height: 30px;
-                    font-size: 20px;
-                    max-width: 280px;
-                }
-    
-                .container-all{
-                    padding: 30px 0px 50px 0px;
-                }
-    
-                .container-center{
-                    padding: 20px 0px;
-                    gap: 40px;
-                }
-    
-
-
-
-    
-                /* ------------section header--navbar------------ */
-                h2{
-                  max-width: 252px;
-                  text-align: center;
-                  font-weight: 700;
-                }
-
-                .info-header p{
-                    max-width: 305px;
-                    font-weight: 400;
-                }
-
-                .info-card p{
-                    max-width: 245px;
-                }
-
-                .info-grid{
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .section-block{
-                    display: flex;
-                    flex-direction: column;
-                    padding: 30px 40px 73px 40px;
-                }
-            }    
+            @media only screen and (min-width: 320px) and (max-width: 768px){}
