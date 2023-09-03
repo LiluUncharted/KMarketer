@@ -6,113 +6,277 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat?query=mon">
         <link href="styles.css" rel="stylesheet">
+        <script src="main.js"></script>
     </head>
 
 
     <body>
         <section class="cover">
             <div class="container">
-                <header class="header">
-                    <div class="logo-box">
-                        <a href="#" class="logo"><img src="img/KMarketer.svg" alt="logo"></a>
-                    </div>
-
-                    <div class="navbar">
-                        <nav>
-                            <ul class="right-nav">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Product</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Contact</a></li>
+                <div class="container-header">
+                    <header class="header">
+                        <div class="logo-box">
+                            <a href="#" class="logo"><img src="img/KMarketer.svg" alt="logo"></a>
+                        </div>
+    
+                        <div class="navbar">
+                            <nav>
+                                <ul class="right-nav">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+    
+                            <ul class="right-nav-icons">
+                                <li>
+                                    <a href="#"><img src="img/search.svg" alt="search"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/cart.svg" alt="cart"></a>
+                                </li>
                             </ul>
-                        </nav>
-
-                        <ul class="right-nav-icons">
-                            <li>
-                                <a href="#"><img src="img/search.svg" alt="search"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="img/cart.svg" alt="cart"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </header>
-
-                <div class="container-center">
-                    <h1>We Take Care of the Future</h1>
-                    <h4>We know how large objects will act, but things on a small scale just do not act that way.</h4>
-                    
-                    <div class="buttons" id="big--buttons">
-                        <button class="button button--primary">Get Quote Now</button>
-                        <button class="button button--secondary">Learn More</button>
+                        </div>
+                    </header>
+    
+                    <div class="container-center">
+                        <h1>We Take Care of the Future</h1>
+                        <h4>We know how large objects will act, but things on a small scale just do not act that way.</h4>
+                        
+                        <div class="buttons" id="big--buttons">
+                            <button class="button button--primary">Get Quote Now</button>
+                            <button class="button button--secondary">Learn More</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
 
         <section>
             <div class="container">
-                <div class="info-header">
-                    <h2>Why choose us</h2>
-                    <p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
-                </div>
-
-                <div class="info-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <img src="img/briefcase.svg" alt="icon_briefcase">
-                            <h5 class="info-card-header-title">Digital Marketing</h5>
-                        </div>
-                        <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                <div class="container-info">
+                    <div class="info-header">
+                        <h2 class="info-heading uppercase">Why choose us</h2>
+                        <p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
                     </div>
-
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <img src="img/store.svg" alt="icon-store">
-                            <h5 class="info-card-header-title">Digital Marketing</h5>
+    
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <img src="img/briefcase.svg" alt="icon_briefcase">
+                                <h5 class="info-card-header-title">Digital Marketing</h5>
+                            </div>
+                            <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
                         </div>
-                        <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <img src="img/book.svg" alt="icon_book">
-                            <h5 class="info-card-header-title">Business Growing</h5>
+    
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <img src="img/store.svg" alt="icon-store">
+                                <h5 class="info-card-header-title">Digital Marketing</h5>
+                            </div>
+                            <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
                         </div>
-                        <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <img src="img/people.svg" alt="icon_people">
-                            <h5 class="info-card-header-title">National top 50 firms</h5>
+    
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <img src="img/book.svg" alt="icon_book">
+                                <h5 class="info-card-header-title">Business Growing</h5>
+                            </div>
+                            <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
                         </div>
-                        <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <img src="img/graph.svg" alt="icon_graph">
-                            <h5 class="info-card-header-title">National top 50 firms</h5>
+    
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <img src="img/people.svg" alt="icon_people">
+                                <h5 class="info-card-header-title">National top 50 firms</h5>
+                            </div>
+                            <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
                         </div>
-                        <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <img src="img/medal.svg" alt="icon_medal">
-                            <h5 class="info-card-header-title">Web Development</h5>
+    
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <img src="img/graph.svg" alt="icon_graph">
+                                <h5 class="info-card-header-title">National top 50 firms</h5>
+                            </div>
+                            <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
                         </div>
-                        <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+    
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <img src="img/medal.svg" alt="icon_medal">
+                                <h5 class="info-card-header-title">Web Development</h5>
+                            </div>
+                            <p>the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="cover-green">
+            <div class="container">
+                <div class="container-video">
+                    <div class="info-header">
+                        <h2 class="info-heading">We are providing best business service</h2>
+                        <p>Problems trying to resolve the conflict between 
+                            the two major realms of Classical physics: Newtonian mechanics </p>
+                    </div>
+                    <div class="card-video">
+                        <button id="button-video" class="video-button"><img src="img/icon_play.svg" alt=""></button>
+                        <video width="877px" height="442px" poster="img/video-cover.png" controls id="banner-video" preload="auto" loop>
+                            <source src="video/owl.mp4" type="video/mp4">
+                         </video>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section>
+            <div class="container">
+                <div class="container-review">
+                    <div class="info-header">
+                        <h2 class="info-heading">What clients say</h2>
+                        <p>Problems trying to resolve the conflict between 
+                            the two major realms of Classical physics: Newtonian mechanics </p>
+                    </div>
+                    <div class="info-grid">
+                        <div class="review-card">
+                            <div class="review-card-content">
+                                <div class="stars-numb">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icn_emty_star.svg" alt="emty-star">
+                                </div>
+                                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+                                <div class="info-reviewer">
+                                    <img src="img/rewiever_photo_1.svg" alt="rewiever_photo_1">
+                                    <div class="reviewer-name">
+                                        <a href="#">Regina Miles</a>
+                                        <h6 class="reviewer-speciality">Designer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="review-card">
+                            <div class="review-card-content">
+                                <div class="stars-numb">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icn_emty_star.svg" alt="emty-star">
+                                </div>
+                                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+                                <div class="info-reviewer">
+                                    <img src="img/rewiever_photo_2.svg" alt="rewiever_photo_2">
+                                    <div class="reviewer-name">
+                                        <a href="url">Regina Miles</a>
+                                        <h6 class="reviewer-speciality">Designer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="review-card">
+                            <div class="review-card-content">
+                                <div class="stars-numb">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                    <img src="img/icon_full_star.svg" alt="full-star">
+                                </div>
+                                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+                                <div class="info-reviewer">
+                                    <img src="img/rewiever_photo_3.svg" alt="rewiever_photo_3">
+                                    <div class="reviewer-name">
+                                        <a href="url">Rob Miles</a>
+                                        <h6 class="reviewer-speciality">Designer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="container-team">
+                    <div class="info-header">
+                        <h2 class="info-heading">Meet Our Team</h2>
+                        <p>Problems trying to resolve the conflict between 
+                            the two major realms of Classical physics: Newtonian mechanics </p>
+                    </div>
+                    <div class="info-grid">
+                        <div class="team-card-content">
+                            <img src="img/team_1.svg" alt="Ashley Fletcher">
+                            <div class="team-info">
+                                <h5 class="info-card-header-title">Ashley Fletcher</h5>
+                                <h6 class="team-speciality">CEO</h6>
+                                <nav>
+                                    <ul class="team-social-media">
+                                        <li>
+                                            <a href="#"><img src="img/icon_facebook_lightblue.svg" alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon_instagram_lightblue.svg" alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon_twitter_lightblue.svg" alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <img src="img/team_2.svg" alt="Rodney Stratton">
+                            <div class="team-info">
+                                <h5 class="info-card-header-title">Rodney Stratton</h5>
+                                <h6 class="team-speciality">Consultant</h6>
+                                <nav>
+                                    <ul class="team-social-media">
+                                        <li>
+                                            <a href="#"><img src="img/icon_facebook_lightblue.svg" alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon_instagram_lightblue.svg" alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon_twitter_lightblue.svg" alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <img src="img/team_3.svg" alt="Avie Beaton">
+                            <div class="team-info">
+                                <h5 class="info-card-header-title">Avie Beaton</h5>
+                                <h6 class="team-speciality">CO Founder</h6>
+                                <nav>
+                                    <ul class="team-social-media">
+                                        <li>
+                                            <a href="#"><img src="img/icon_facebook_lightblue.svg" alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon_instagram_lightblue.svg" alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon_twitter_lightblue.svg" alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <footer>
             <div class="container">
@@ -120,7 +284,6 @@
                     <div class="logo-box">
                         <a href="#" class="logo"><img src="img/KMarketer.svg" alt="logo"></a>
                     </div>
-                    
                     <nav>
                         <ul class="footer-media">
                             <li>
@@ -236,4 +399,5 @@
             </div>
         </div>
     </body>
+    <script src="main.js"></script>
 </html>
