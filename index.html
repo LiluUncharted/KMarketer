@@ -278,6 +278,50 @@
             </div>
         </section>
 
+        <section class="cover-appointment">
+            <div class="container">
+                <div class="container-appointment">
+                    <div>
+                        <h5 class="secondary-heading">Contact Us</h5>
+                        <h2 class="primary-heading">Make an Appointment</h2>
+                    </div>
+                    <form class="form-appointment-grid">
+                        <input type="text" class="form-data" name="fullname" placeholder="Full Name" required>
+                        <input type="email" class="form-data" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                        <select class="form-select" name="date">
+                            <option value="">Select day</option>
+                            <option value="mo">Monday</option>
+                            <option value="tu">Tuesday</option>
+                            <option value="we">Wednesday</option>
+                            <option value="th">Thursday</option>
+                            <option value="fr">Friday</option>
+                        </select>
+                        <select class="form-select" name="time">
+                            <option value="">Available time</option>
+                            <option value="8am">2pm</option>
+                            <option value="9am">3pm</option>
+                            <option value="10am">4pm</option>
+                            <option value="11am">6pm</option>
+                        </select>
+                        <textarea class="form-textarea" name="message" placeholder="Message"></textarea>
+                        <input class="form-button" type="submit" value="Book Appointment">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="cover-white">
+            <div class="container">
+                <div class="container-contact">
+                    <div class="header-contact">
+                        <h3>consulting agency for your business</h3>
+                        <p>the quick fox jumps over the lazy dog</p>
+                    </div>
+                    <button class="form-button">Contact Us</button>
+                </div>
+            </div>
+        </section>
+
         <footer>
             <div class="container">
                 <div class="footer-header">
@@ -393,11 +437,12 @@
                 </div>
             </div>
         </footer>
-        <div class="footer-copyright">
+
+        <section class="footer-copyright">
             <div class="copyright-content">
                 <h6 class="copyright-heading">made with love by figmaland all right reserved</h6>
             </div>
-        </div>
+        </section>
     </body>
     <script src="main.js"></script>
 </html>
