@@ -12,10 +12,10 @@ console.log(countryDescription);
 
 
 
-let weightSarah = '65';
-let weightBob = '93';
-let heightSarah = '1.75';
-let heightBob = '1.89';
+let weightSarah = 65;
+let weightBob = 93;
+let heightSarah = 1.75;
+let heightBob = 1.89;
 
 let sarahBMI = weightSarah / (heightSarah ** 2);
 console.log(sarahBMI);
