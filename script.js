@@ -25,9 +25,7 @@ console.log(bobBMI);
 
 if (sarahBMI < 18.5) {
     console.log("Sarah has underweight");
-}
-
-if (sarahBMI > 18.5 && sarahBMI < 25) {
+} else if (sarahBMI > 18.5 && sarahBMI < 25) {
     console.log("Sarah has normal weight");
 }
 
