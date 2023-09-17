@@ -100,45 +100,45 @@ console.log(`The ${countryCode} corresponds to the ${countryName}`);
 
 
 //2
-const score = 96;
+const score = 72;
 switch (true) {
-    case score >= 97 && score <= 100:
+    case score >= 97:
         grade = "A+";
         break;
-    case score >= 93 && score <= 96:
+    case score >= 93:
         grade = "A";
         break;
-    case score >= 90 && score <= 92:
+    case score >= 90:
         grade = "A-";
         break;
-    case score >= 87 && score <= 89:
+    case score >= 87:
         grade = "B+";
         break;
-    case score >= 83 && score <= 86:
+    case score >= 83:
         grade = "B";
         break;
-    case score >= 80 && score <= 82:
+    case score >= 80:
         grade = "B-";
         break;    
-    case score >= 77 && score <= 79:
+    case score >= 77:
         grade = "C+";
         break;
-    case score >= 73 && score <= 76:
+    case score >= 73:
         grade = "C";
         break;
-    case score >= 70 && score <= 72:
+    case score >= 70:
         grade = "C-";
         break;
-    case score >= 67 && score <= 69:
+    case score >= 67:
         grade = "D+";
         break;    
-    case score >= 63 && score <= 66:
+    case score >= 63:
         grade = "D";
         break;
-    case score >= 60 && score <= 62:
+    case score >= 60:
         grade = "D-";
         break;
-    case score >= 0 && score <= 59:
+    default:
         grade = "F";
 }
 console.log(`If score is ${score} grade is ${grade}`);
