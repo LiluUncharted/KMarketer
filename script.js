@@ -192,7 +192,7 @@ console.log(fruits);
 //2
 const numbers = [1, 2, 3, 4, 5];
 const removedNumber = numbers.pop();
-console.log(removedNumber);
+console.log(numbers);
 
 numbers.shift();
 console.log(numbers);
@@ -200,7 +200,7 @@ console.log(numbers);
 //3
 const color = ["red", "green", "blue", "yellow"];
 const green = color.indexOf("green");
-console.log(green);
+console.log(`Index of green is ${green}`);
 
 const hasOrange = color.includes("orange");
 console.log(hasOrange);
@@ -211,7 +211,7 @@ peopleNames.unshift("David");
 console.log(peopleNames);
 
 const mike = peopleNames.indexOf("Mike");
-console.log(mike);
+console.log(`Index of Mike is ${mike}`);
 
 //5
 const nums = [2,4,6,8,10];
