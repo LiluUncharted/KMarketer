@@ -181,21 +181,21 @@ console.log(calculationSupply(78, 1));
 
 //Homework 16
 //1
-const fruits = [];
-fruits.push("apple");
-fruits.push("banana");
-fruits.push("orange");
+const anyFruits = [];
+anyFruits.push("apple");
+anyFruits.push("banana");
+anyFruits.push("orange");
 
-console.log(fruits.length);
-console.log(fruits);
+console.log(anyFruits.length);
+console.log(anyFruits);
 
 //2
-const numbers = [1, 2, 3, 4, 5];
-const removedNumber = numbers.pop();
-console.log(numbers);
+const anyNumbers = [1, 2, 3, 4, 5];
+const removedNumber = anyNumbers.pop();
+console.log(anyNumbers);
 
-numbers.shift();
-console.log(numbers);
+anyNumbers.shift();
+console.log(anyNumbers);
 
 //3
 const color = ["red", "green", "blue", "yellow"];
