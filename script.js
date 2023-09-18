@@ -175,3 +175,65 @@ const calculationSupply = (currentAge, foodPerDay, maxYears = 100) => {
 console.log(calculationSupply(29, 2));
 console.log(calculationSupply(56, 1.5));
 console.log(calculationSupply(78, 1));
+
+
+
+
+//Homework 16
+//1
+const fruits = [];
+fruits.push("apple");
+fruits.push("banana");
+fruits.push("orange");
+
+console.log(fruits.length);
+console.log(fruits);
+
+//2
+const numbers = [1, 2, 3, 4, 5];
+const removedNumber = numbers.pop();
+console.log(numbers);
+
+numbers.shift();
+console.log(numbers);
+
+//3
+const color = ["red", "green", "blue", "yellow"];
+const green = color.indexOf("green");
+console.log(`Index of green is ${green}`);
+
+const hasOrange = color.includes("orange");
+console.log(hasOrange);
+
+//4
+const peopleNames = ["John", "Jane", "Mike", "Jennifer"];
+peopleNames.unshift("David");
+console.log(peopleNames);
+
+const mike = peopleNames.indexOf("Mike");
+console.log(`Index of Mike is ${mike}`);
+
+//5
+const nums = [2,4,6,8,10];
+const has5 = nums.includes(5);
+console.log(has5);
+
+nums.push(12);
+console.log(nums);
+
+//6
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const sortedMonths = months.toSorted();
+console.log(sortedMonths);
+
+//7
+const result1 = months.filter((word) => word.length > 3);
+console.log(result1);
+
+//8
+const result2 = months.slice(5, 11);
+console.log(result2);
+
+//9
+const result3 = sortedMonths.filter((word) => word.length >= 5);
+console.log(result3.join("-"));
