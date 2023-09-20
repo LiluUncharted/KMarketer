@@ -370,33 +370,33 @@ console.log(`puppies: ${dog.puppies.join(",")}`);
 //Homework 18
 //1 Цикл по объекту
 let PersPropsArray = (person) => {
-    let keys = Object.keys(person);
-    let i = 0;
-    while (i < keys.length) {
-        let key = keys[i];
-        console.log(key + ":" + person[key]);
-        i++;
-    }
-}
+  let keys = Object.keys(person);
+  let i = 0;
+  while (i < keys.length) {
+    let key = keys[i];
+    console.log(key + ":" + person[key]);
+    i++;
+  }
+};
 
 const pers = {
-    name: "John", 
-    age: 30, 
-    city: "New-York"
+  name: "John",
+  age: 30,
+  city: "New-York",
 };
 PersPropsArray(pers); //name:John
-                    //age:30
-                    //city:New-York
+//age:30
+//city:New-York
 
- //2 Поиск по объекту
+//2 Поиск по объекту
 let FindWords = (pers, keyToFind) => {
-    for (key in pers) {
-       if(key === keyToFind){
-        return true;
-       } 
+  for (key in pers) {
+    if (key === keyToFind) {
+      return true;
     }
-    return false;
-}
+  }
+  return false;
+};
 
 let keyToFind = "age";
 let hasKey = FindWords(pers, keyToFind);
@@ -415,73 +415,71 @@ function CombineWords(obj) {
   return combineValue;
 }
 
-const obj = { 
-    prop1: "Hello", 
-    prop2: "World", 
-    prop3: "!" 
+const obj = {
+  prop1: "Hello",
+  prop2: "World",
+  prop3: "!",
 };
 
 console.log(CombineWords(obj)); //HelloWorld!
 
 //4 Количество гласных
 let CountVolwes = (string) => {
-    let volwes = ["a", "e", "i", "o", "u", "y"];
-    let resultVolwes = 0;
-    let i = 0;
-    while (i < string.length) {
-        
-        if(volwes.indexOf(string[i]) != -1) {
-            resultVolwes++;
-        }
-        else if(volwes.indexOf(string[i].toLowerCase()) != -1) {
-            resultVolwes++;
-        }
-        i++;
+  let volwes = ["a", "e", "i", "o", "u", "y"];
+  let resultVolwes = 0;
+  let i = 0;
+  while (i < string.length) {
+    if (volwes.indexOf(string[i]) != -1) {
+      resultVolwes++;
+    } else if (volwes.indexOf(string[i].toLowerCase()) != -1) {
+      resultVolwes++;
     }
-    return resultVolwes;
-}
+    i++;
+  }
+  return resultVolwes;
+};
 
 const inputString = "Hello world, my name is Albert";
 console.log(CountVolwes(inputString)); //9
 
 //5 Классификация студентов
 const CalcStudentAverage = (scoresByStudent) => {
-    let resultScores = Object.assign({}, scoresByStudent);
-    for (student in scoresByStudent) {
-        let scores = scoresByStudent[student];
-        i = 0;
-        let sum = 0;
-        let average = 0;
-        let studentScoresLength = scores.length;
-        while (i < studentScoresLength) {
-            sum += scores[i];
-            i++;
-        }
-        average = sum / studentScoresLength;
-        resultScores[student] = `medium: ${average.toFixed(2)}`;
+  let resultScores = Object.assign({}, scoresByStudent);
+  for (student in scoresByStudent) {
+    let scores = scoresByStudent[student];
+    i = 0;
+    let sum = 0;
+    let average = 0;
+    let studentScoresLength = scores.length;
+    while (i < studentScoresLength) {
+      sum += scores[i];
+      i++;
     }
-    return resultScores;
-}
+    average = sum / studentScoresLength;
+    resultScores[student] = `medium: ${average.toFixed(2)}`;
+  }
+  return resultScores;
+};
 
 const studentScores = {
-    John: [8, 7, 9], 
-    Mary: [9, 9, 10], 
-    Alex: [6, 8, 7]
+  John: [8, 7, 9],
+  Mary: [9, 9, 10],
+  Alex: [6, 8, 7],
 };
 
 console.log(CalcStudentAverage(studentScores)); //{John: 'medium: 8.00', Mary: 'medium: 9.33', Alex: 'medium: 7.00'}
 
 //6 Переворачивание строки
 const ReverseString = (string) => {
-    const stringArray = string.split("");
-    const resultStringArray = [];
-    let i = stringArray.length - 1;
-    do {
-        resultStringArray.push(stringArray[i]);
-        i--;
-    } while (i >= 0);
-    const resultString = resultStringArray.join("");
-    return resultString;
+  const stringArray = string.split("");
+  const resultStringArray = [];
+  let i = stringArray.length - 1;
+  do {
+    resultStringArray.push(stringArray[i]);
+    i--;
+  } while (i >= 0);
+  const resultString = resultStringArray.join("");
+  return resultString;
 };
 
 const mainString = "Hello World!";
@@ -489,16 +487,16 @@ console.log(ReverseString(mainString)); //!dlroW olleH
 
 //7 Проверка палиндрома
 const isPalindrome = (palindromeString) => {
-    let left = 0;
-    let right = palindromeString.length - 1;
-    while (left < right) {
-        if (palindromeString[left] !== palindromeString[right]) {
-            return false;
-        }
-        left++;
-        right--;
+  let left = 0;
+  let right = palindromeString.length - 1;
+  while (left < right) {
+    if (palindromeString[left] !== palindromeString[right]) {
+      return false;
     }
-    return true;
+    left++;
+    right--;
+  }
+  return true;
 };
 
 const palindromeString = "level";
