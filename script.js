@@ -425,13 +425,12 @@ console.log(CombineWords(obj)); //HelloWorld!
 
 //4 Количество гласных
 let CountVolwes = (string) => {
+  let lowerString = string.toLowerCase();
   let volwes = ["a", "e", "i", "o", "u", "y"];
   let resultVolwes = 0;
   let i = 0;
   while (i < string.length) {
-    if (volwes.indexOf(string[i]) != -1) {
-      resultVolwes++;
-    } else if (volwes.indexOf(string[i].toLowerCase()) != -1) {
+    if (volwes.indexOf(lowerString[i]) !== -1) {
       resultVolwes++;
     }
     i++;
@@ -486,11 +485,11 @@ const mainString = "Hello World!";
 console.log(ReverseString(mainString)); //!dlroW olleH
 
 //7 Проверка палиндрома
-const isPalindrome = (palindromeString) => {
+const IsPalindrome = (str) => {
   let left = 0;
-  let right = palindromeString.length - 1;
+  let right = word.length - 1;
   while (left < right) {
-    if (palindromeString[left] !== palindromeString[right]) {
+    if (str[left] !== str[right]) {
       return false;
     }
     left++;
@@ -499,6 +498,6 @@ const isPalindrome = (palindromeString) => {
   return true;
 };
 
-const palindromeString = "level";
-const isPalindromic = isPalindrome(palindromeString);
+const word = "level";
+const isPalindromic = IsPalindrome(word);
 console.log(isPalindromic); //true
