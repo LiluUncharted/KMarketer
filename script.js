@@ -487,7 +487,7 @@ console.log(ReverseString(mainString)); //!dlroW olleH
 //7 Проверка палиндрома
 const IsPalindrome = (str) => {
   let left = 0;
-  let right = word.length - 1;
+  let right = str.length - 1;
   while (left < right) {
     if (str[left] !== str[right]) {
       return false;
