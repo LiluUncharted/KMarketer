@@ -501,3 +501,75 @@ const IsPalindrome = (str) => {
 const word = "level";
 const isPalindromic = IsPalindrome(word);
 console.log(isPalindromic); //true
+
+//Homework 19
+//1 Задача усреднения
+const studentGrade = [
+  { name: "Anna", note: 9 },
+  { name: "Denis", note: 7 },
+  { name: "Cristian", note: 8 },
+  { name: "Daniel", note: 6 },
+  { name: "Elena", note: 10 },
+];
+
+const CountAverage = (grades) => {
+  const sum = grades.reduce((total, grade) => total + grade.note, 0);
+  const average = sum / grades.length;
+  return average;
+};
+
+const averageGrades = CountAverage(studentGrade);
+console.log(`Students average: ${averageGrades}`); //Students average: 8
+
+//2 Фильтрация и сопоставление
+const products = [
+  { name: "Tshirt", price: 50, isAvailable: true },
+  { name: "Pants", price: 80, isAvailable: false },
+  { name: "Jacket", price: 120, isAvailable: true },
+  { name: "Shirt", price: 60, isAvailable: true },
+  { name: "Skirt", price: 40, isAvailable: false },
+];
+
+const FilterProducts = (products) => {
+  const available = products.filter((product) => product.isAvailable);
+  const availableProducts = available.map((avProduct) => avProduct.name);
+  return availableProducts;
+};
+
+const availableProducts = FilterProducts(products);
+console.log(`Available products: ${availableProducts.join(",")}`); //Available products: Tshirt,Jacket,Shirt
+
+//3 Нахождение максимального элемента
+const val = [10, 5, 8, 15, 3, 20];
+
+const MaxVal = (numbers) => {
+  const maxValue = numbers.reduce(
+    (total, numb) => (total = Math.max(total, numb))
+  );
+  return maxValue;
+};
+
+const maxValue = MaxVal(val);
+console.log(`The biggest number in array is ${maxValue}`); //The biggest number in array is 20
+
+//4 Классификация студентов
+const studentsGrade = [
+  { John: [8, 7, 9] },
+  { Mary: [9, 9, 10] },
+  { Alex: [6, 8, 7] },
+];
+
+const CalcAverageGrade = (students) => {
+  const result = students.reduce((accumulator, student) => {
+    const studentName = Object.keys(student)[0];
+    const grades = student[studentName];
+    const averageGrade =
+      grades.reduce((sum, grade) => sum + grade, 0) / grades.length;
+    accumulator[studentName] = averageGrade.toFixed(1);
+    return accumulator;
+  }, {});
+  return result;
+};
+
+const separateAverage = CalcAverageGrade(studentsGrade);
+console.log(separateAverage); //{John: '8.0', Mary: '9.3', Alex: '7.0'}
