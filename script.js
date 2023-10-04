@@ -573,3 +573,92 @@ const CalcAverageGrade = (students) => {
 
 const separateAverage = CalcAverageGrade(studentsGrade);
 console.log(separateAverage); //{John: '8.0', Mary: '9.3', Alex: '7.0'}
+
+//Homework 20
+//1
+let studentProp = {
+  firstName: "John",
+  lastName: "Doe",
+  faculty: "history",
+  year: 3,
+};
+
+const User = ({ firstName, lastName, faculty, year }) => {
+  console.log([`${firstName} ${lastName}`, faculty, year]); //['John Doe', 'history', 3]
+};
+
+User(studentProp);
+
+//2
+let inputColors = ["red", "green", "blue", "violet"];
+
+const Colors = ([color1, , color3]) => {
+  return `${color1}, ${color3}`;
+};
+
+console.log(Colors(inputColors)); //red, blue
+
+//or
+const getElements = ([first, , third]) => [first, third];
+
+console.log(getElements(inputColors)); //['red', 'blue']
+
+//Spread и Rest операторы
+//3
+const numbArray = (...args) => args;
+
+const newNumbsArray = numbArray(5, 48, 21, 74, 10, 15, 3);
+console.log(newNumbsArray); //[5, 48, 21, 74, 10, 15, 3]
+
+//4
+let arr1 = ["green", "red", "blue"];
+let arr2 = [3, 4, 5];
+
+const getSpread = (array1, array2) => [...array1, ...array2];
+
+let newPropArray = getSpread(arr1, arr2);
+console.log(newPropArray); //['green', 'red', 'blue', 3, 4, 5]
+
+//5
+let newProp = { language: "en" };
+
+const addLanguage = (student, lang) => ({ ...student, ...lang });
+
+const updateStudent = addLanguage(studentProp, newProp);
+console.log(updateStudent); //{firstName: 'John', lastName: 'Doe', faculty: 'history', year: 3, language: 'en'}
+
+//6*
+function ConvertString(word) {
+  const lowercaseWord = word.toLowerCase();
+  const charCounts = {};
+  for (const char of lowercaseWord) {
+    charCounts[char] = (charCounts[char] || 0) + 1;
+  }
+  let result = "";
+  for (const char of lowercaseWord) {
+    if (charCounts[char] > 1) {
+      result += ")";
+    } else {
+      result += "(";
+    }
+  }
+  return result;
+}
+
+console.log(ConvertString("din"));
+console.log(ConvertString("recede"));
+console.log(ConvertString("Success"));
+console.log(ConvertString("(( @"));
+
+//7*
+const evenNumb = [2, 4, 0, 100, 4, 11, 2602, 36];
+const oddNumb = [160, 3, 1719, 19, 11, 13, -21];
+
+function findOutlier(int) {
+  let even = int.filter((a) => a % 2 === 0);
+  let odd = int.filter((a) => a % 2 !== 0);
+  return even.length === 1 ? even[0] : odd[0];
+}
+
+console.log(findOutlier(evenNumb));
+console.log(findOutlier(oddNumb));
