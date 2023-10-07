@@ -608,10 +608,23 @@
                     transition-duration: 0.4s;
                 }
 
+                .valid-message{
+                    color: var(--main-font-color);
+                }
+
+                .error-message{
+                    color: var(--main-button-color);
+                }
+
+                .validation-message{
+                    display: grid;
+                    font-size: var(--main-font-size);
+                    align-items: center;
+                }
+
                 .form-appointment-grid{
                     display: grid;
-                    grid-template-columns: auto auto;
-                    grid-template-rows: repeat(4, auto);
+                    grid-template-columns: 4 auto;
                     gap: 20px;
                     justify-content: left;
                 }
