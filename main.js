@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       messageError.classList.add("error-message");
       messageError.classList.remove("valid-message");
     } else {
-      messageError.innerHTML = `Text ${message} was added`;
+      messageError.innerHTML = `${message} was added`;
       messageError.classList.add("valid-message");
       messageError.classList.remove("error-message");
     }

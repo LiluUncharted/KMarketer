@@ -288,36 +288,45 @@
                         <h2 class="primary-heading">Make an Appointment</h2>
                     </div>
                     <form class="form-appointment-grid" id="appointmentForm" novalidate>
-                        <input type="text" id="formName" class="form-data" name="fullname" placeholder="Full Name" required>
-                        <div id="nameError" class="validation-message"></div>
+                        <div class="form-grid">
+                            <input type="text" id="formName" class="form-data" name="fullname" placeholder="Full Name" required>
+                        <label for="text" id="nameError" class="validation-message"></label>
+                        </div>
 
-                        <input type="email" class="form-data" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
-                        <div id="emailError" class="validation-message"></div>
+                        <div class="form-grid">
+                            <input type="email" class="form-data" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                        <label for="email" id="emailError" class="validation-message"></label>
+                        </div>
 
-                        <select class="form-select" name="date">
-                            <option value="">Select day</option>
-                            <option value="Monday">Monday</option>
-                            <option value="Tuesday">Tuesday</option>
-                            <option value="Wednsday">Wednesday</option>
-                            <option value="Thursday">Thursday</option>
-                            <option value="Friday">Friday</option>
-                        </select>
-                        <div id="dateError" class="validation-message"></div>
+                        <div class="form-grid">
+                            <select class="form-select" name="date">
+                                <option value="">Select day</option>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednsday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                            </select>
+                            <label for="date" id="dateError" class="validation-message"></label>
+                        </div>
 
-                        <select class="form-select" name="time">
-                            <option value="">Available time</option>
-                            <option value="2pm">2pm</option>
-                            <option value="3pm">3pm</option>
-                            <option value="4pm">4pm</option>
-                            <option value="6pm">6pm</option>
-                        </select>
-                        <div id="timeError" class="validation-message"></div>
+                        <div class="form-grid">
+                            <select class="form-select" name="time">
+                                <option value="">Available time</option>
+                                <option value="2pm">2pm</option>
+                                <option value="3pm">3pm</option>
+                                <option value="4pm">4pm</option>
+                                <option value="6pm">6pm</option>
+                            </select>
+                            <label for="time" id="timeError" class="validation-message"></label>
+                        </div>
 
-                        <textarea class="form-textarea" name="message" placeholder="Message"></textarea>
+                        <div class="text-grid">
+                            <textarea class="form-textarea" name="message" placeholder="Message"></textarea>
+                        <label for="message" id="messageError" class="validation-message"></label>
+                        </div>
                         
                         <input class="form-button" type="submit" value="Book Appointment">
-
-                        <div id="messageError" class="validation-message"></div>
                     </form>
                 </div>
             </div>

@@ -563,8 +563,7 @@
                 }
 
                 .form-textarea{
-                    grid-column: 1 / span 2;
-                    padding: 16px 507px 100px 26px;
+                    padding: 15px 20px 100px 20px;
                     border: 1px solid var(--muted-color);
                     border-radius: 5px;
                     background: #F9F9F9;
@@ -581,6 +580,7 @@
                 }
 
                 .form-button{
+                    grid-row: 4;
                     color: var(--main-font-color);
                     font-family: Montserrat;
                     font-size: var(--font-size);
@@ -617,15 +617,25 @@
                 }
 
                 .validation-message{
-                    display: grid;
-                    font-size: var(--main-font-size);
+                    display: flex;
+                    font-size: 12px;
                     align-items: center;
+                    padding: 5px 20px;
+                }
+                .form-grid{
+                    display: grid;
+                }
+
+                .text-grid{
+                    display: grid;
+                    grid-column: 1 / span 2;
                 }
 
                 .form-appointment-grid{
                     display: grid;
-                    grid-template-columns: 4 auto;
-                    gap: 20px;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: repeat(4, auto);
+                    grid-gap: 20px;
                     justify-content: left;
                 }
 
@@ -634,6 +644,7 @@
                     flex-direction: column;
                     padding: 90px 0px;
                     gap: 40px;
+                    max-width: 610px;
                 }
 
                 .cover-appointment{
