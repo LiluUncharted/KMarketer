@@ -12,76 +12,69 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   let appointmentForm = document.getElementById("appointmentForm");
-  appointmentForm.addEventListener("submit", validationForm);
-  function validationForm (e) {
-    e.preventDefault();
-    let fullName = document.querySelector("[name='fullname']").value;
-    let email = document.querySelector("[name='email']").value;
-    let message = document.querySelector("[name='message']").value;
-    let date = document.querySelector("[name='date']").value;
-    let time = document.querySelector("[name='time']").value;
+  appointmentForm.addEventListener("submit", handleSubmit);
 
-    let nameError = document.getElementById("nameError");
-    let emailError = document.getElementById("emailError");
-    let messageError = document.getElementById("messageError");
-    let dateError = document.getElementById("dateError");
-    let timeError = document.getElementById("timeError");
+  let fullName = document.querySelector("[name='fullname']");
+  let email = document.querySelector("[name='email']");
+  let message = document.querySelector("[name='message']");
+  let date = document.querySelector("[name='date']");
+  let time = document.querySelector("[name='time']");
 
-    nameError.textContent = "";
-    emailError.textContent = "";
-    messageError.textContent = "";
-    dateError.textContent = "";
-    timeError.textContent = "";
+  const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if (fullName.split(" ").filter(Boolean).length < 2) {
-      nameError.textContent = "Full Name should content 2 words";
-      nameError.classList.add("error-message");
-      nameError.classList.remove("valid-message");
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const validationElements = [
+      {
+        label: document.getElementById("nameError"),
+        validLabelText: `Name ${fullName.value} was added`,
+        errorLabelText: "Full Name should content 2 words",
+        condition: fullName.value.split(" ").filter(Boolean).length >= 2,
+      },
+      {
+        label: document.getElementById("emailError"),
+        validLabelText: `Email ${email.value} was added`,
+        errorLabelText: "Please enter a valid email address",
+        condition: email.value.match(mailformat),
+      },
+      {
+        label: document.getElementById("messageError"),
+        validLabelText: "",
+        errorLabelText: "Message should content min 3 words",
+        condition: message.value.split(" ").filter(Boolean).length >= 3,
+      },
+      {
+        label: document.getElementById("dateError"),
+        validLabelText: "",
+        errorLabelText: "Please select day",
+        condition: date.value !== "",
+      },
+      {
+        label: document.getElementById("timeError"),
+        validLabelText: "",
+        errorLabelText: "Please select time",
+        condition: time.value !== "",
+      },
+    ];
+
+    validationElements.forEach((element) => {
+      validateFormElement(element);
+    });
+  }
+
+  function toggleClass(element, classToAdd, classToRemove) {
+    element.classList.add(classToAdd);
+    element.classList.remove(classToRemove);
+  }
+  
+  function validateFormElement({ label, validLabelText, errorLabelText, condition }) {
+    if (condition) {
+      label.textContent = validLabelText;
+      toggleClass(label, "valid-message", "error-message");
     } else {
-      nameError.textContent = `Name ${fullName} was added`;
-      nameError.classList.add("valid-message");
-      nameError.classList.remove("error-message");
-    }
-
-    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (!email.match(mailformat)) {
-      emailError.textContent = "Please enter a valid email address";
-      emailError.classList.add("error-message");
-      emailError.classList.remove("valid-message");
-    } else {
-      emailError.textContent = `Email ${email} was added`;
-      emailError.classList.add("valid-message");
-      emailError.classList.remove("error-message");
-    }
-
-    if (message.split(" ").filter(Boolean).length < 3) {
-      messageError.textContent = "Message should content min 3 words";
-      messageError.classList.add("error-message");
-      messageError.classList.remove("valid-message");
-    } else {
-      messageError.textContent = `${message} was added`;
-      messageError.classList.add("valid-message");
-      messageError.classList.remove("error-message");
-    }
-
-    if (date === "") {
-      dateError.textContent = "Please select day";
-      dateError.classList.add("error-message");
-      dateError.classList.remove("valid-message");
-    } else {
-      dateError.textContent = `Day ${date} was selected`;
-      dateError.classList.add("valid-message");
-      dateError.classList.remove("error-message");
-    }
-
-    if (time === "") {
-      timeError.textContent = "Please select time";
-      timeError.classList.add("error-message");
-      timeError.classList.remove("valid-message");
-    } else {
-      timeError.textContent = `Time ${time} was selected`;
-      timeError.classList.add("valid-message");
-      timeError.classList.remove("error-message");
+      label.textContent = errorLabelText;
+      toggleClass(label, "error-message", "valid-message");
     }
   }
 });
