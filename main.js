@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
   // Code to be executed when the DOM is ready
   let videoButton = document.getElementById("button-video");
   let videoBanner = document.getElementById("banner-video");
@@ -67,8 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
     element.classList.add(classToAdd);
     element.classList.remove(classToRemove);
   }
-  
-  function validateFormElement({ label, validLabelText, errorLabelText, condition }) {
+
+  function validateFormElement({
+    label,
+    validLabelText,
+    errorLabelText,
+    condition,
+  }) {
     if (condition) {
       label.textContent = validLabelText;
       toggleClass(label, "valid-message", "error-message");
@@ -77,4 +82,35 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleClass(label, "error-message", "valid-message");
     }
   }
+
+  const userData = await fetch(
+    "https://jsonplaceholder.typicode.com/users/3"
+  ).then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  });
+
+  const userPosts = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?userId=${userData.id}`
+  ).then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  });
+
+  const userComments = await fetch(
+    `https://jsonplaceholder.typicode.com/comments?postId=${userPosts[0].id}`
+  ).then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    }).catch((error) => {
+      console.log("Was problem with the fetch operation:", error.message);
+    });
+
+  console.log(userComments);
 });
